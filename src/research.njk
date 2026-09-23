@@ -1,0 +1,80 @@
+---
+layout: base.njk
+title: Research and publications
+description: Journal articles, reports, conference proceedings and press commentary by members of the Sri Lanka Forum for Small Scale Fisheries.
+---
+<header class="page-head">
+  <div class="wrap">
+    <h1>Research and publications</h1>
+    <p class="lede">Work by forum members on value chains, processing, coastal ecosystems and the lives of fishing communities. Everything here is free to download.</p>
+  </div>
+</header>
+
+<section class="section" id="publications">
+  <div class="wrap">
+    <div class="section-head"><h2>Publications</h2></div>
+
+    <form class="filters" role="search" onsubmit="return false">
+      <label for="pub-q">Search
+        <input id="pub-q" type="search" placeholder="Title, author or topic" autocomplete="off">
+      </label>
+      <label for="pub-type">Type
+        <select id="pub-type">
+          <option value="">All types</option>
+          {% for t in publications | uniqueBy("type") %}<option>{{ t }}</option>{% endfor %}
+        </select>
+      </label>
+      <output id="pub-count" aria-live="polite"></output>
+    </form>
+
+    <ul class="rows" data-pubs>
+      {% for p in publications %}
+      <li class="row" data-type="{{ p.type }}">
+        <div class="row__year">{{ p.year }}</div>
+        <div>
+          <h3>{{ p.title }}</h3>
+          <p class="row__meta">{{ p.authors }}. {{ p.venue }}.</p>
+          <p class="row__summary">{{ p.summary }}</p>
+          <p class="small" style="margin:.6rem 0 0"><span class="tag">{{ p.type }}</span><span class="tag">{{ p.topic }}</span></p>
+        </div>
+        <div class="row__links">
+          <a href="/assets/docs/{{ p.pdf }}">Download PDF</a>
+          {% if p.doi %}<a href="{{ p.doi }}" rel="noopener">Publisher page</a>{% endif %}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+    <p id="pub-empty" class="empty" hidden>No publications match your search. Try a shorter term or choose “All types”.</p>
+  </div>
+</section>
+
+<section class="section section--tide" id="press">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Press and commentary</h2>
+      <p>Members write regularly for the national press on the issues facing fishing communities.</p>
+    </div>
+    <div class="clips">
+      {% for item in press | sortByDate %}
+      <article class="clip">
+        {% if item.image %}<img class="clip__img" src="/assets/img/{{ item.image }}.webp" alt="" loading="lazy">{% endif %}
+        <p class="clip__outlet">{{ item.outlet }}{% if item.date %}, {{ item.date | longDate }}{% endif %}</p>
+        <h3>{{ item.title }}</h3>
+        {% if item.authors %}<p class="small" style="color:var(--ink)">{{ item.authors }}</p>{% endif %}
+        <p>{{ item.summary }}</p>
+        {% if item.url %}<a class="clip__link" href="{{ item.url }}" rel="noopener">Read on {{ item.outlet }}</a>
+        {% else %}<a class="clip__link" href="/assets/img/{{ item.image }}.webp">View the clipping</a>{% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap split">
+    <h2>Share your work</h2>
+    <div class="prose">
+      <p>If you are a member and have published on small-scale fisheries, send the reference and a PDF to <a href="mailto:{{ site.email }}">{{ site.email }}</a> and we will add it here.</p>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,148 @@
+---
+layout: base.njk
+---
+<section class="hero">
+  <picture>
+    <source media="(max-width: 700px)" srcset="/assets/img/hero-sm.webp">
+    <img class="hero__img" src="/assets/img/hero.webp" alt="A fisher carrying a net along a beach in Sri Lanka" width="2000" height="1333" fetchpriority="high">
+  </picture>
+  <div class="wrap">
+    <div class="hero__body">
+      <h1>Sri Lanka Forum for Small Scale Fisheries</h1>
+      <p>Researchers, state officers, community organisations and civil society working together, since 2018, so that small-scale fishers have a voice in how their fisheries are governed.</p>
+      <div class="actions">
+        <a class="btn" href="/about/">About the forum</a>
+        <a class="btn btn--ghost" href="/research/">Browse research</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap split">
+    <div>
+      <h2>Why small-scale fisheries matter</h2>
+      <figure class="figure">
+        <img src="/assets/img/landing-beach.webp" alt="Fishers and a boy sorting a catch on the beach beside fibreglass boats" width="500" height="281" loading="lazy">
+        <figcaption>Sorting the catch at a beach landing site.</figcaption>
+      </figure>
+    </div>
+    <div class="prose">
+      <p class="lede">Almost everyone who fishes, processes or sells fish in Sri Lanka works in the small-scale sector. Around 2.7 million people depend on it.</p>
+      <p>Fishers work from beaches, lagoons, reservoirs and nearshore waters, in orus, kattumarams and fibreglass boats. Men mostly fish; women do much of the processing and selling. On average, Sri Lankans eat around 10.8 kg of fish a year.</p>
+      <p>Yet the sector is threatened more by people than by nature: overfishing, destructive gear, unregulated technology, fuel shocks and climate change. Research in Sri Lanka has studied the fish far more than the fishers, and fishing communities rarely have a seat where decisions are made.</p>
+      <p>The forum exists to change that. We bring evidence and community experience to the same table, and we work for the FAO Voluntary Guidelines for Securing Sustainable Small-Scale Fisheries to become part of national policy.</p>
+      <p><a href="/about/">Read how the forum began</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--navy work-section">
+  <div class="wrap work">
+    <div class="work__intro">
+      <h2>What we do</h2>
+      <p>Four strands of work, all aimed at one outcome: fisheries governed with the people who depend on them.</p>
+    </div>
+    <div class="work__grid">
+      <a class="work__item" href="/research/">
+        <h3>Research</h3>
+        <p>Members study value chains, post-harvest losses, labour, gender and climate resilience, and publish the results openly.</p>
+        <span class="work__link">Publications</span>
+      </a>
+      <a class="work__item" href="/about/">
+        <h3>Policy advice</h3>
+        <p>We advise government on the national fisheries policy and on bringing the SSF Guidelines into law and planning.</p>
+        <span class="work__link">Our approach</span>
+      </a>
+      <a class="work__item" href="/programmes/">
+        <h3>Interactive platforms</h3>
+        <p>Fishers, officials, scientists and industry discuss one issue at a time, such as trawling or fuel, and agree recommendations.</p>
+        <span class="work__link">Past platforms</span>
+      </a>
+      <a class="work__item" href="/programmes/savings-for-future/">
+        <h3>Community programmes</h3>
+        <p>Workshops and field projects with fishing communities, especially women fish processors, from Jaffna to Tangalle.</p>
+        <span class="work__link">Savings for Future</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Current programme</h2>
+      <p><a href="/programmes/">All programmes and events</a></p>
+    </div>
+    <article class="feature">
+      <img src="/assets/img/sff-group.webp" alt="Women fish processors and workshop facilitators standing together outdoors" width="1800" height="1200" loading="lazy">
+      <div class="feature__body">
+        <p class="feature__meta">Kudawella, Negombo and Ambalangoda, 2024</p>
+        <h3>Savings for Future: building resilience among women fish processors</h3>
+        <p>With the Sabaragamuwa University of Sri Lanka and Australia Awards, the forum is helping women who dry and process fish to save through a mobile app, plan for climate shocks and add value to their products.</p>
+        <a class="btn btn--line" href="/programmes/savings-for-future/">About the project</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section section--tide">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>In the press</h2>
+      <p><a href="/research/#press">All articles</a></p>
+    </div>
+    <div class="clips">
+      {% for item in press | sortByDate | take(3) %}
+      <article class="clip">
+        <p class="clip__outlet">{{ item.outlet }}{% if item.date %}, {{ item.date | longDate }}{% endif %}</p>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.summary }}</p>
+        {% if item.url %}<a class="clip__link" href="{{ item.url }}" rel="noopener">Read on {{ item.outlet }}</a>{% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--navy">
+  <div class="wrap split--even split">
+    <div>
+      <h2>Fishing for Life 2022</h2>
+      <p>For the International Year of Artisanal Fisheries and Aquaculture, the forum hosted the first South and South-East Asian Conference on Small Scale Fisheries and Aquaculture at the Ocean University of Sri Lanka, with seven keynotes, around 40 papers and video testimony from fishing communities across the region.</p>
+      <div class="actions">
+        <a class="btn btn--ghost" href="/conference/">About the conference</a>
+      </div>
+    </div>
+    <dl class="facts">
+      <div><dt>Dates</dt><dd>19 and 20 September 2022</dd></div>
+      <div><dt>Venue</dt><dd>Ocean University of Sri Lanka, Colombo, and online</dd></div>
+      <div><dt>Keynotes</dt><dd>Maarten Bavinck, Svein Jentoft, Anthony Charles, Meryl J. Williams, Nicole Franz, Premachandra Wattage and Oscar Amarasinghe</dd></div>
+      <div><dt>Outcome</dt><dd>The SACSFA 2022 Declaration on the way forward for the region</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="section partners-section">
+  <div class="wrap partners-wrap">
+    <div class="partners__intro">
+      <h2>Partners and supporters</h2>
+      <p>National agencies, universities and international organisations that have hosted, funded or worked alongside the forum.</p>
+    </div>
+    <ul class="partners">
+      {%- for p in [
+        ["partner-fao", "Food and Agriculture Organization of the United Nations"],
+        ["partner-ssf-hub", "SSF Hub"],
+        ["partner-ousl", "Ocean University of Sri Lanka"],
+        ["partner-nara", "National Aquatic Resources Research and Development Agency"],
+        ["partner-naqda", "National Aquaculture Development Authority"],
+        ["partner-iyafa", "International Year of Artisanal Fisheries and Aquaculture 2022"]
+      ] %}
+      <li class="partner">
+        <div class="partner__logo"><img src="/assets/img/{{ p[0] }}.png" alt="" loading="lazy"></div>
+        <p class="partner__name">{{ p[1] }}</p>
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>

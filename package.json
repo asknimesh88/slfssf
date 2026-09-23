@@ -1,0 +1,20 @@
+{
+  "name": "slfssf-website",
+  "version": "1.0.0",
+  "description": "Website of the Sri Lanka Forum for Small Scale Fisheries (slfssf.com)",
+  "scripts": {
+    "dev": "eleventy --serve",
+    "build": "eleventy",
+    "images": "node scripts/images.cjs"
+  },
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.6",
+    "sharp": "^0.35.4"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "type": "module"
+}

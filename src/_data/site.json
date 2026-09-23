@@ -1,0 +1,20 @@
+{
+  "name": "Sri Lanka Forum for Small Scale Fisheries",
+  "short": "SLFSSF",
+  "url": "https://slfssf.com",
+  "founded": "February 2018",
+  "email": "info@slfssf.lk",
+  "phone": "+94 70 168 8304",
+  "phoneHref": "+94701688304",
+  "address": ["Ocean University of Sri Lanka", "Nara Road, Crow Island", "Colombo 01500, Sri Lanka"],
+  "mapUrl": "https://maps.google.com/?q=Ocean+University+of+Sri+Lanka+Colombo+15",
+  "description": "An independent forum of researchers, state officers, community and civil society organisations working for sustainable small-scale fisheries and the wellbeing of fishing communities in Sri Lanka.",
+  "nav": [
+    { "label": "About", "url": "/about/" },
+    { "label": "Committee", "url": "/committee/" },
+    { "label": "Programmes", "url": "/programmes/" },
+    { "label": "Research", "url": "/research/" },
+    { "label": "Conference", "url": "/conference/" },
+    { "label": "Contact", "url": "/contact/" }
+  ]
+}

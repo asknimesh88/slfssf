@@ -1,0 +1,26 @@
+---
+layout: base.njk
+title: Contact
+description: Contact the Sri Lanka Forum for Small Scale Fisheries.
+---
+<header class="page-head">
+  <div class="wrap">
+    <h1>Contact the forum</h1>
+    <p class="lede">Write to us about membership, research collaboration, interactive platforms, or issues facing your fishing community.</p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="wrap split">
+    <ul class="contact-list">
+      <li><h2>Email</h2><p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p></li>
+      <li><h2>Phone</h2><p><a href="tel:{{ site.phoneHref }}">{{ site.phone }}</a></p></li>
+      <li><h2>Address</h2><address>{% for line in site.address %}{{ line }}<br>{% endfor %}</address><p class="small" style="margin-top:.5rem"><a href="{{ site.mapUrl }}" rel="noopener">Open in Google Maps</a></p></li>
+    </ul>
+    <div class="prose">
+      <h2>Join the forum</h2>
+      <p>The forum is open to academics, researchers, state officers, community organisations, civil society organisations and individuals who share its aims. Tell us who you are, your organisation, and how you would like to contribute, and a committee member will reply.</p>
+      <p><a class="btn" href="mailto:{{ site.email }}?subject=Joining%20the%20forum">Email about membership</a></p>
+    </div>
+  </div>
+</section>

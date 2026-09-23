@@ -1,0 +1,42 @@
+---
+layout: base.njk
+title: Executive committee
+description: The executive committee of the Sri Lanka Forum for Small Scale Fisheries.
+---
+<header class="page-head">
+  <div class="wrap">
+    <h1>Executive committee</h1>
+    <p class="lede">Committee members are drawn from universities across Sri Lanka and bring expertise in fisheries economics, value chains, aquaculture and the social sciences.</p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="wrap">
+    <div class="people">
+      {% for p in committee %}
+      <article class="person">
+        <img src="/assets/img/{{ p.photo }}.webp" alt="Portrait of {{ p.shortName or p.name }}" width="600" height="600" loading="lazy">
+        <p class="person__role">{{ p.role }}</p>
+        <h3>{{ p.name }}</h3>
+        {% if p.affiliation %}<p class="person__aff">{{ p.affiliation }}</p>{% endif %}
+        {% if p.bio.length %}
+        <details>
+          <summary>Biography</summary>
+          {% for para in p.bio %}<p>{{ para }}</p>{% endfor %}
+        </details>
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--tide">
+  <div class="wrap split">
+    <h2>Founding president</h2>
+    <div class="prose">
+      <p><strong>Emeritus Professor Oscar Amarasinghe</strong> led the forum from its founding in 2018. He pioneered fisheries economics and management in Sri Lanka at the University of Ruhuna and is Chancellor of the Ocean University of Sri Lanka.</p>
+      <p>His work includes the national fisheries policy process, transboundary fisheries in the North, the ILO Work in Fishing Convention 188, island-wide consultations on small-scale fisheries, implementation of the SSF Guidelines and the strengthening of fisheries co-operatives, often with the FAO and the World Bank.</p>
+    </div>
+  </div>
+</section>

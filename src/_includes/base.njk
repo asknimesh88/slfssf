@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if title %}{{ title }} | {{ site.short }}{% else %}{{ site.name }} ({{ site.short }}){% endif %}</title>
+  <meta name="description" content="{{ description or site.description }}">
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ title or site.name }}">
+  <meta property="og:description" content="{{ description or site.description }}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:image" content="{{ site.url }}/assets/img/{{ ogImage or 'hero-sm' }}.webp">
+  <link rel="icon" type="image/png" href="/assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Public+Sans:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body class="{{ bodyClass }}">
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="masthead">
+    <div class="wrap masthead__inner">
+      <a class="brand" href="/" aria-label="{{ site.name }}, home">
+        <img src="/assets/img/logo.png" alt="" width="200" height="108">
+        <span class="brand__name">Sri Lanka Forum for<br>Small Scale Fisheries</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="nav" aria-label="Main">
+        <ul>
+          {% for item in site.nav %}
+          <li><a href="{{ item.url }}"{% if page.url.startsWith(item.url) %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    {{ content | safe }}
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__grid">
+      <div class="footer__about">
+        <img src="/assets/img/logo.png" alt="" width="100" height="54">
+        <p><strong>{{ site.name }}</strong><br>{{ site.description }}</p>
+      </div>
+      <div>
+        <h2>Visit</h2>
+        <address>{% for line in site.address %}{{ line }}<br>{% endfor %}</address>
+      </div>
+      <div>
+        <h2>Contact</h2>
+        <p><a href="mailto:{{ site.email }}">{{ site.email }}</a><br><a href="tel:{{ site.phoneHref }}">{{ site.phone }}</a></p>
+      </div>
+      <div>
+        <h2>Site</h2>
+        <ul>
+          {% for item in site.nav %}<li><a href="{{ item.url }}">{{ item.label }}</a></li>{% endfor %}
+        </ul>
+      </div>
+    </div>
+    <div class="wrap footer__base">
+      <p>&copy; {{ buildYear }} {{ site.name }}. Founded {{ site.founded }}.</p>
+    </div>
+  </footer>
+
+  <script src="/assets/js/site.js" defer></script>
+</body>
+</html>
