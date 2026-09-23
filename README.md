@@ -32,7 +32,7 @@ The site deploys as a Cloudflare Worker serving static assets. `wrangler.jsonc` 
 
 In the Cloudflare project connected to this repository:
 
-- Build command: `npm run build`
+- Build command: leave empty (wrangler runs `npm run build` itself, see `wrangler.jsonc`)
 - Deploy command: `npx wrangler deploy`
 
 Every push to `main` then rebuilds and redeploys. To deploy from this machine instead: `npm run deploy`.
