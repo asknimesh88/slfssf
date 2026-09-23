@@ -26,20 +26,15 @@ npm run build    # writes the site to dist/
 
 Originals stay out of the repository (they live in the shared Google Drive export next to this folder, and in `raw/` for images taken from the old site). Add a line to the list in `scripts/images.cjs` pointing at the original, then run `npm run images`. It writes a resized WebP to `src/assets/img/`, which is what gets deployed.
 
-## Deploy to Cloudflare Pages
+## Deploy to Cloudflare
 
-Connect the repository in Cloudflare Pages with:
+The site deploys as a Cloudflare Worker serving static assets. `wrangler.jsonc` tells it to serve the `dist/` folder, with `dist/404.html` for missing pages.
 
-- Root directory: `/` (repository root)
+In the Cloudflare project connected to this repository:
+
 - Build command: `npm run build`
-- Build output directory: `dist`
-- Environment variable: `NODE_VERSION=20` (or newer)
+- Deploy command: `npx wrangler deploy`
 
-Or deploy from this machine without Git:
+Every push to `main` then rebuilds and redeploys. To deploy from this machine instead: `npm run deploy`.
 
-```bash
-npm run build
-npx wrangler pages deploy dist --project-name <your-pages-project>
-```
-
-Then add `slfssf.com` under the Pages project's Custom domains and remove it from the old project.
+Then add `slfssf.com` under the Worker's Settings > Domains & Routes and remove it from the old project.
