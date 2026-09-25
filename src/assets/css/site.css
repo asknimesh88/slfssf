@@ -26,7 +26,7 @@ body {
   margin: 0;
   background: var(--paper);
   color: var(--muted);
-  font: 400 1.25rem/1.6 var(--sans);
+  font: 400 1.125rem/1.6 var(--sans);   /* 18/28.8 */
 }
 img { max-width: 100%; height: auto; display: block; }
 a { color: var(--blue-text); text-underline-offset: .18em; text-decoration-thickness: 1px; }
