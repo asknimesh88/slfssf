@@ -1,13 +1,20 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "slfssf",
+  "main": "worker.js",
   "compatibility_date": "2026-09-21",
   // Build before every deploy, so it works even if the dashboard build command is empty.
   "build": { "command": "npm run build" },
-  // Serve the site on the main domain. Cloudflare creates the DNS record on deploy.
-  "routes": [{ "pattern": "slfssf.com", "custom_domain": true }],
+  // Serve the site on the main domain; www is attached too and worker.js redirects it to the apex.
+  "routes": [
+    { "pattern": "slfssf.com", "custom_domain": true },
+    { "pattern": "www.slfssf.com", "custom_domain": true }
+  ],
   "assets": {
     "directory": "dist",
-    "not_found_handling": "404-page"
+    "binding": "ASSETS",
+    "not_found_handling": "404-page",
+    // Run worker.js before serving files so www requests are redirected, not served.
+    "run_worker_first": true
   }
 }

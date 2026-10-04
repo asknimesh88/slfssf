@@ -6,7 +6,8 @@
     "dev": "eleventy --serve",
     "build": "eleventy",
     "images": "node scripts/images.cjs",
-    "deploy": "npm run build && wrangler deploy"
+    "deploy": "npm run build && wrangler deploy",
+    "test": "node scripts/test-worker.mjs"
   },
   "license": "UNLICENSED",
   "devDependencies": {
