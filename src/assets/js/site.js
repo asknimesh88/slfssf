@@ -34,3 +34,16 @@ if (list) {
   type.addEventListener('change', apply);
   apply();
 }
+
+// Scroll-to-top button: shown once the reader is a screen or so down the page
+const toTop = document.querySelector('.to-top');
+if (toTop) {
+  toTop.hidden = false;
+  const update = () => toTop.classList.toggle('is-visible', scrollY > 600);
+  addEventListener('scroll', update, { passive: true });
+  update();
+  toTop.addEventListener('click', () => {
+    const smooth = !matchMedia('(prefers-reduced-motion: reduce)').matches;
+    scrollTo({ top: 0, behavior: smooth ? 'smooth' : 'auto' });
+  });
+}
