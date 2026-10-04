@@ -11,6 +11,8 @@ const OUT = path.join(__dirname, '../src/assets/img');
 const SFF = `${DRIVE}/Community Works/savings for future/images`;
 const EC = `${DRIVE}/Executive Committee`;
 const NEWS = `${DRIVE}/Research Arm/Newspaper Articles`;
+const NEW = path.join(__dirname, '../../New images/New Images');
+const NEW_EC = `${NEW}/Executive Committee`;
 
 // [source, output name, width, options]
 const jobs = [
@@ -42,6 +44,11 @@ const jobs = [
   [`${EC}/prof. Yashodha.jpg`, 'yasoda-hirimuthugoda', 600, { square: true }],
   [`${EC}/Dr Ahilan Kadirgamar.jpeg`, 'ahilan-kadirgamar', 600, { square: true }],
   [`${EC}/Yathursha Ulakentheran FSSF.jpg`, 'yathursha-ulakentheran', 600, { square: true }],
+  [`${NEW_EC}/Prof. Oscar Amarasinghe.webp`, 'oscar-amarasinghe', 600, { square: true }],
+  [`${NEW}/Prof. Nilantha De Silva.jpg`, 'nilantha-de-silva', 600, { square: true }],
+  [`${RAW}/dimuthu-wickramasinghe.jpg`, 'dimuthu-wickramasinghe', 512, { square: true }],
+  [`${NEW_EC}/Dr Gayathri-Lokuge_assistant secretary.jpg`, 'gayathri-lokuge', 600, { square: true }],
+  [`${NEW_EC}/Mr. Dhammika Ranathunga ec member.jpg`, 'dhammika-ranathunga', 430, { square: true }],
   // Partner logos keep PNG so white backgrounds stay crisp.
   [`${RAW}/Logos-1-150x150.jpg`, 'partner-ousl', 300, { png: true, trim: true }],
   [`${RAW}/fao-logo-en-e1685980448270-150x150.jpg`, 'partner-fao', 300, { png: true, trim: true }],

@@ -1,5 +1,15 @@
 [
   {
+    "name": "Emeritus Prof. Oscar Amarasinghe",
+    "role": "Executive Advisor",
+    "photo": "oscar-amarasinghe",
+    "affiliation": "Professor Emeritus, University of Ruhuna; first Chancellor, Ocean University of Sri Lanka",
+    "bio": [
+      "Oscar Amarasinghe is a social scientist specialising in small-scale fisheries, fisheries governance and development economics. He holds a BSc in Agriculture from the University of Peradeniya, an MSc in Agricultural Development from Ghent University, Belgium, and a PhD in Social Sciences from the University of Namur, Belgium.",
+      "Over more than three decades he has worked on small-scale fisheries, livelihoods, development economics and coastal resource management, with national bodies and international organisations including the FAO. His work includes the national fisheries policy process, transboundary fisheries in the North, the ILO Work in Fishing Convention 188 and the implementation of the SSF Guidelines. He founded the Sri Lanka Forum for Small Scale Fisheries and served as its president."
+    ]
+  },
+  {
     "name": "Senior Prof. D. Achini M. De Silva",
     "role": "President",
     "photo": "achini-de-silva",
@@ -34,7 +44,7 @@
   {
     "name": "Prof. N. Y. Hirimuthugoda",
     "shortName": "Yasoda Hirimuthugoda",
-    "role": "Executive Committee",
+    "role": "Convenor",
     "photo": "yasoda-hirimuthugoda",
     "affiliation": "Department of Animal Science, Faculty of Agriculture, University of Ruhuna",
     "bio": [
@@ -43,8 +53,25 @@
     ]
   },
   {
+    "name": "Senior Prof. W. Nilantha De Silva",
+    "role": "Vice President",
+    "photo": "nilantha-de-silva",
+    "affiliation": "Chair, Department of Agricultural Economics and Agribusiness, Faculty of Agriculture, University of Ruhuna",
+    "bio": [
+      "Nilantha De Silva is Senior Professor and Chair of the Department of Agricultural Economics and Agribusiness at the University of Ruhuna. Qualifications include a BSc in Agriculture from the University of Ruhuna, an MSc in Forestry and Environmental Management from the University of Peradeniya, and a PhD from the University of Ruhuna.",
+      "Research interests cover natural resource management, fisheries economics and value chains, wetland and environmental management, sustainable agriculture and climate change adaptation."
+    ]
+  },
+  {
+    "name": "Dr. W. A. A. D. L. Wickramasinghe",
+    "shortName": "Dimuthu Lanka Wickramasinghe",
+    "role": "Vice President",
+    "photo": "dimuthu-wickramasinghe",
+    "bio": []
+  },
+  {
     "name": "Dr. Ahilan Kadirgamar",
-    "role": "Executive Committee",
+    "role": "North-East Coordinator",
     "photo": "ahilan-kadirgamar",
     "affiliation": "Department of Sociology, University of Jaffna",
     "bio": [
@@ -53,9 +80,21 @@
     ]
   },
   {
+    "name": "Dr. Gayathri Lokuge",
+    "role": "Assistant Secretary",
+    "photo": "gayathri-lokuge",
+    "bio": []
+  },
+  {
     "name": "Ms. Yathursha Ulakentheran",
-    "role": "Executive Committee",
+    "role": "Executive Committee Member",
     "photo": "yathursha-ulakentheran",
+    "bio": []
+  },
+  {
+    "name": "Dr. Dhammika Ranathunga",
+    "role": "Executive Committee Member",
+    "photo": "dhammika-ranathunga",
     "bio": []
   }
 ]
